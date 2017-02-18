@@ -1,0 +1,13 @@
+machine:
+ java:
+    version: oraclejdk8
+
+dependencies:
+  pre:
+    - wget https://github.com/bazelbuild/bazel/releases/download/0.4.4/bazel-0.4.4-installer-linux-x86_64.sh
+    - chmod +x bazel-0.4.4-installer-linux-x86_64.sh
+    - ./bazel-0.4.4-installer-linux-x86_64.sh --user
+
+test:
+  override:
+    - bazel test simple-nn/... --spawn_strategy=standalone --genrule_strategy=standalone
