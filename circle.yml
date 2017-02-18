@@ -4,9 +4,9 @@ machine:
 
 dependencies:
   pre:
-    - wget https://github.com/bazelbuild/bazel/releases/download/0.1.2/bazel-0.1.2-installer-linux-x86_64.sh
-    - chmod +x bazel-0.1.2-installer-linux-x86_64.sh
-    - ./bazel-0.1.2-installer-linux-x86_64.sh --user
+    - wget https://github.com/bazelbuild/bazel/releases/download/0.4.4/bazel-0.4.4-installer-linux-x86_64.sh
+    - chmod +x bazel-0.4.4-installer-linux-x86_64.sh
+    - ./bazel-0.4.4-installer-linux-x86_64.sh --user
 
 test:
   override:
