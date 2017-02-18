@@ -1,9 +1,13 @@
+#pragma once
+
 #include <vector>
 
 namespace LinAlg {
-using matrix<T> = vector<vector<T>>;
+
+/// use basic built-in types to represent vectors and matrices
+template <typename T> using matrix = std::vector<std::vector<T>>;
 using mat32 = matrix<float>;
-using vec32 = vector<float>;
+using vec32 = std::vector<float>;
 
 /// matrix-vector multiplication
 vec32 mul(const mat32& a, const vec32& b);
@@ -12,5 +16,5 @@ vec32 mul(const mat32& a, const vec32& b);
 vec32 hadamard(const vec32& a, const vec32& b);
 
 /// dot product of two vectors
-vec32 dot(const vec32& a, vec32& b);
+float dot(const vec32& a, vec32& b);
 }

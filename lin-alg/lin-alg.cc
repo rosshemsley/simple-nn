@@ -16,7 +16,7 @@ vec32 LinAlg::hadamard(const vec32 &a, const vec32 &b) {
     return r;
 }
 
-vec32 LinAlg::dot(const vec32 &a, vec32 &b) {
+float LinAlg::dot(const vec32 &a, vec32 &b) {
     assert(a.size() == b.size());
     auto r = float();
     for (size_t i = 0; i != a.size(); ++i)
