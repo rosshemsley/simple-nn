@@ -10,4 +10,4 @@ dependencies:
 
 test:
   override:
-    - bazel test simple-nn/... --strategy=CppCompile=standalone
+    - bazel test simple-nn/... --spawn_strategy=standalone --genrule_strategy=standalone
