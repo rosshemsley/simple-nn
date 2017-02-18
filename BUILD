@@ -1,6 +1,6 @@
 alias(
     name = "simple-nn",
-    actual = ":simple-nnd",
+    actual = ":simple-nn",
 )
 
 test_suite(

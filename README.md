@@ -1,6 +1,6 @@
 # simple-nn
 
-A simple C++11 Neural Network library. A project to get better at NNs.
+A standalone bare-bones neural network library in C++11. A project to get better at NNs.
 
 ### Requirements
 
@@ -13,4 +13,4 @@ A simple C++11 Neural Network library. A project to get better at NNs.
 
 ### Testing
 
-`bazel test simple-nn/...`
+`bazel test all-tests`
