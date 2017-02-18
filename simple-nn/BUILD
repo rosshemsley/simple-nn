@@ -7,6 +7,7 @@ cc_library(
 )
 
 cc_test(
+    timeout = "short",
     name = "simple-nn-test",
     srcs = ["test.cc"],
     deps = [":simple-nn"],
