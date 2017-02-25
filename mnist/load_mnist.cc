@@ -4,7 +4,8 @@
 #include <cstdint>
 #include <algorithm>
 
-constexpr auto MNIST_HEADER_VALUE = 2051;
+constexpr auto MNIST_HEADER_IMAGES = 2051;
+constexpr auto MNIST_HEADER_LABELS = 2049;
 
 using namespace std;
 using namespace mnist;
@@ -49,7 +50,7 @@ vector<Image> mnist::load_images(istream& stream) {
     const auto rows = unsigned(bigendian_int32(buff.data() + 8));
     const auto cols = unsigned(bigendian_int32(buff.data() + 12));
 
-    if (magic_constant != MNIST_HEADER_VALUE) {
+    if (magic_constant != MNIST_HEADER_IMAGES) {
         cerr << "not a valid mnist file header: " << magic_constant << endl;
         return result;
     }
@@ -63,3 +64,35 @@ vector<Image> mnist::load_images(istream& stream) {
     return result;
 }
 
+
+vector<Label> mnist::load_labels(istream& stream) {
+    auto result = vector<Label>();
+
+    auto buff = vector<char>(8);
+    stream.read(buff.data(), int(buff.size()));
+
+    if(!stream) {
+        cerr << "failed to read file header" << endl;
+        return result;
+    }
+
+    const auto magic_constant = bigendian_int32(buff.data() + 0);
+    const auto label_count = unsigned(bigendian_int32(buff.data() + 4));
+
+    if (magic_constant != MNIST_HEADER_LABELS) {
+        cerr << "not a valid mnist label file header: " << magic_constant << endl;
+        return result;
+    }
+
+    result.resize(label_count);
+
+    auto buffer = vector<char>(1);
+
+    for (size_t i = 0; i != label_count; ++i) {
+        stream.read(buffer.data(), 1);
+        if (!stream) return result;
+        result[i] = Label(buffer[0]);
+    }
+
+    return result;   
+}
