@@ -1,14 +1,13 @@
 package(default_visibility = ["//visibility:public"])
 
 cc_library(
-    name = "lin-alg",
-    srcs = ["lin-alg.cc"],
-    hdrs = ["lin-alg.h"],
+    name = "mnist",
+    srcs = ["mnist.cc"],
+    hdrs = ["mnist.h"],
 )
 
 cc_test(
     timeout = "short",
-    name = "lin-alg-test",
+    name = "mnist_test",
     srcs = ["test.cc"],
-    deps = [":lin-alg"],
 )
