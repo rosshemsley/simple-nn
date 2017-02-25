@@ -1,18 +1,16 @@
 #pragma once
 
-#include "lin-alg.h"
+#include <armadillo>
 
 #include <vector>
 #include <istream>
 #include <cstdint>
 
-namespace MNist {
+namespace mnist {
 
-struct Image {
-  int row_size;
-  int col_size;
-  matrix<int8_t> data;
-};
+using Image = arma::Mat<uint8_t>;
+
+using Label = uint8_t;
 
 /**
  * @brief       Load MNIST data from a stream
@@ -41,5 +39,5 @@ std::vector<Image> load_images(std::istream&);
  * ........
  * xxxx     unsigned byte   ??               label
  */
-std::vector<int8_t> load_labels(std::istream&);
+std::vector<Label> load_labels(std::istream&);
 };
