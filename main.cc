@@ -1,11 +1,22 @@
 #include <mnist.h>
 
-#include <string>
+#include <layer.h>
+#include <network.h>
+
 #include <fstream>
 #include <iostream>
+#include <string>
 
 using namespace std;
 using namespace mnist;
+
+void build_network() {
+    auto network = simplenet::Network{
+        new simplenet::FullyConnectedLayer(30, 30),
+        new simplenet::FullyConnectedLayer(30, 30),
+        new simplenet::FullyConnectedLayer(30, 10),
+    };
+}
 
 int main() {
     fstream image_stream("_data/train-images-idx3-ubyte");
