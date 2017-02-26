@@ -8,14 +8,14 @@ using namespace std;
 using namespace mnist;
 
 int main() {
-    auto image_stream = fstream("_data/train-images-idx3-ubyte");
-    auto label_stream = fstream("_data/train-labels-idx1-ubyte");
+    fstream image_stream("_data/train-images-idx3-ubyte");
+    fstream label_stream("_data/train-labels-idx1-ubyte");
     const auto images = load_images(image_stream);
     const auto labels = load_labels(label_stream);
 
     cout << "Loaded " << images.size() << " images" << endl;
     cout << "Loaded " << labels.size() << " labels" << endl;
 
-    auto outstream = ofstream("img.bmp");
+    ofstream outstream("img.bmp");
     write_image_bmp(images[5], outstream);
 }
