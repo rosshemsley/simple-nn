@@ -1,3 +1,3 @@
-#include <simple_nn.h>
+#include <simplenet.h>
 
 int main() {}

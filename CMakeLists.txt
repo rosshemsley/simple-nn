@@ -6,7 +6,7 @@ find_package(Armadillo REQUIRED)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -Wextra -pedantic -O3 -Werror -Wall -g -fno-omit-frame-pointer")
 
 include_directories(${ARMADILLO_INCLUDE_DIRS})
-include_directories(simple_nn/include)
+include_directories(simplenet/include)
 
 include_directories(mnist)
 set(MNIST_SOURCES
@@ -14,8 +14,8 @@ set(MNIST_SOURCES
 )
 
 set(SIMPLE_NN_SOURCES
-    simple_nn/src/simple_nn
-    simple_nn/src/test
+    simplenet/src/simplenet
+    simplenet/src/test
 )
 
 add_library(mnist STATIC ${MNIST_SOURCES})

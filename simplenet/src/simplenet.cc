@@ -1,4 +1,4 @@
-#include <simple_nn.h>
+#include <simplenet.h>
 
 using namespace SimpleNN;
 
