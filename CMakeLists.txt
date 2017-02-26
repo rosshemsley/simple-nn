@@ -11,6 +11,7 @@ include_directories(mnist)
 
 set(MNIST_SOURCES
     mnist/load_mnist
+    mnist/bmp_writer
 )
 
 add_library(mnist STATIC ${MNIST_SOURCES})

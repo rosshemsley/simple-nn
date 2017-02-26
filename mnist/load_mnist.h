@@ -3,7 +3,7 @@
 #include <armadillo>
 
 #include <vector>
-#include <istream>
+#include <iostream>
 #include <cstdint>
 
 namespace mnist {
@@ -40,4 +40,7 @@ std::vector<Image> load_images(std::istream&);
  * xxxx     unsigned byte   ??               label
  */
 std::vector<Label> load_labels(std::istream&);
+
+void write_image_bmp(const Image& img, std::ostream& stream);
+
 };
