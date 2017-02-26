@@ -2,7 +2,7 @@
 
 ![build status](https://circleci.com/gh/rosshemsley/simple-nn.png?style=shield)
 
-A simple feed-forwards neural network library in C++11. Uses Armadillo for fast  linear algebra.
+A simple feed-forward neural network library in C++11. Uses Armadillo for fast  linear algebra.
 
 A project to get better at NNs.
 
@@ -14,8 +14,15 @@ A project to get better at NNs.
 
 ### Compiling
 
-`bazel build simple-nn`
+```
+mkdir build
+cd build
+cmake ..
+make
+```
 
 ### Testing
 
-`bazel test all-tests`
+```
+make test
+```
