@@ -25,16 +25,6 @@ add_library(simplenn STATIC ${SIMPLE_NN_SOURCES})
 target_link_libraries(simplenn ${ARMADILLO_LIBRARIES})
 
 add_executable(train main)
-# target_link_libraries(train simplenn)
 target_link_libraries(train mnist)
 
 enable_testing()
-
-add_executable(simple_nn_tests simple_nn/src/test)
-target_link_libraries(simple_nn_tests simplenn)
-
-add_test(
-    NAME simplenn_tests
-    COMMAND simple_nn_tests
-    WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}
-)
