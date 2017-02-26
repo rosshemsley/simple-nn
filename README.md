@@ -4,7 +4,7 @@ A standalone bare-bones neural network library in C++11. A project to get better
 
 ### Requirements
 
-- [bazel](https://bazel.build)
+- cmake
 - A modern C++ compiler
 
 ### Compiling

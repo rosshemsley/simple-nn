@@ -3,4 +3,5 @@
 namespace SimpleNN {
 
 int do_nothing();
+
 }
