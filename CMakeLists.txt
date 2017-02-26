@@ -10,8 +10,7 @@ include_directories(simple_nn/include)
 include_directories(mnist)
 
 set(MNIST_SOURCES
-    mnist/load_mnist
-    mnist/bmp_writer
+    mnist/mnist
 )
 
 add_library(mnist STATIC ${MNIST_SOURCES})

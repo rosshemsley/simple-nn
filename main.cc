@@ -1,5 +1,6 @@
-#include <load_mnist.h>
+#include <mnist.h>
 
+#include <string>
 #include <fstream>
 #include <iostream>
 
@@ -17,11 +18,6 @@ int main() {
     cout << "Loaded " << images.size() << " images" << endl;
     cout << "Loaded " << labels.size() << " labels" << endl;
 
-    // const auto outfile = ;
-    auto outstream = ofstream("img1.bmp");
-    // outstream.open(outfile);
-    // 
-    cout << int(labels[2]) << endl;
-
-    write_image_bmp(images[2], outstream);
+    auto outstream = ofstream("img.bmp");
+    write_image_bmp(images[5], outstream);
 }

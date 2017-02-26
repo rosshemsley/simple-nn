@@ -9,7 +9,6 @@
 namespace mnist {
 
 using Image = arma::Mat<uint8_t>;
-
 using Label = uint8_t;
 
 /**
@@ -41,6 +40,9 @@ std::vector<Image> load_images(std::istream&);
  */
 std::vector<Label> load_labels(std::istream&);
 
-void write_image_bmp(const Image& img, std::ostream& stream);
+/**
+ * @brief      Write a bmp file to a stream from a loaded image.
+ */
+void write_image_bmp(const Image&, std::ostream&);
 
 };
