@@ -2,9 +2,9 @@
 
 #include <armadillo>
 
-#include <vector>
-#include <iostream>
 #include <cstdint>
+#include <iostream>
+#include <vector>
 
 namespace mnist {
 
@@ -44,5 +44,4 @@ std::vector<Label> load_labels(std::istream&);
  * @brief      Write a bmp file to a stream from a loaded image.
  */
 void write_image_bmp(const Image&, std::ostream&);
-
 };
