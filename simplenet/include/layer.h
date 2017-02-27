@@ -14,9 +14,9 @@ struct Layer {
 };
 
 struct FullyConnectedLayer : Layer {
-    FullyConnectedLayer(size_t n_input_neurons, size_t n_output_neurons) {
-        weights.zeros(n_output_neurons, n_input_neurons);
-        biases.zeros(n_output_neurons);
+    FullyConnectedLayer(size_t n_input_gates, size_t n_output_gates) {
+        weights.zeros(n_output_gates, n_input_gates);
+        biases.zeros(n_output_gates);
     }
 
     vec feed_forwards(const vec& input) const override {
