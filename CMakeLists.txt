@@ -3,7 +3,7 @@ project(simpleNN)
 cmake_minimum_required(VERSION 2.8.0)
 find_package(Armadillo REQUIRED)
 
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -Wextra -pedantic -O3 -Werror -Wall -g -fno-omit-frame-pointer")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14 -Wextra -pedantic -O3 -Werror -Wall -g -fno-omit-frame-pointer")
 
 include_directories(${ARMADILLO_INCLUDE_DIRS})
 include_directories(simplenet/include)
