@@ -2,15 +2,16 @@
 
 ![build status](https://circleci.com/gh/rosshemsley/simple-nn.png?style=shield)
 
-A simple feed-forward neural network library in C++11. Uses Armadillo for fast  linear algebra.
+A simple feed-forward neural network library in C++14. Uses Armadillo for fast  linear algebra.
 
 A project to get better at NNs.
 
 ### Requirements
 
-- cmake
-- armadillo
-- a c++14 compliant compiler
+- CMake
+- Armadillo
+- C++14 compliant compiler
+
 
 ### Docker
 
@@ -30,6 +31,7 @@ You can build the library natively using
 cmake .
 make
 ```
+
 
 ### Testing
 
