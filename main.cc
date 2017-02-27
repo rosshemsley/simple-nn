@@ -5,6 +5,7 @@
 
 #include <fstream>
 #include <iostream>
+#include <memory>
 #include <string>
 
 using namespace std;
@@ -12,9 +13,9 @@ using namespace mnist;
 
 void build_network() {
     auto network = simplenet::Network{
-        new simplenet::FullyConnectedLayer(30, 30),
-        new simplenet::FullyConnectedLayer(30, 30),
-        new simplenet::FullyConnectedLayer(30, 10),
+        make_unique<simplenet::FullyConnectedLayer>(30, 30),
+        make_unique<simplenet::FullyConnectedLayer>(30, 30),
+        make_unique<simplenet::FullyConnectedLayer>(30, 10),
     };
 }
 
