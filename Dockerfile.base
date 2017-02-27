@@ -1,0 +1,6 @@
+FROM buildpack-deps:sid
+
+RUN apt-get update \
+    && apt-get install -y libarmadillo-dev \
+    && apt-get install -y cmake \
+    && apt-get purge -y --auto-remove
