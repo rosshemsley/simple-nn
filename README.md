@@ -10,19 +10,30 @@ A project to get better at NNs.
 
 - cmake
 - armadillo
-- A modern C++ compiler
+- a c++14 compliant compiler
 
-### Compiling
+### Docker
+
+The easiest way to get going is to build this project in Docker.
 
 ```
-mkdir build
-cd build
-cmake ..
+docker build .
+```
+
+The base image is built from `Docker.base`.
+
+
+### Compiling natively
+
+You can build the library natively using
+```
+cmake .
 make
 ```
 
 ### Testing
 
+Tests are run using
 ```
 make test
 ```
