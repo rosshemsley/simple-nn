@@ -10,12 +10,13 @@
 
 using namespace std;
 using namespace mnist;
+using namespace simplenet;
 
 void build_network() {
-    auto network = simplenet::Network{
-        make_unique<simplenet::FullyConnectedLayer>(30, 30),
-        make_unique<simplenet::FullyConnectedLayer>(30, 30),
-        make_unique<simplenet::FullyConnectedLayer>(30, 10),
+    auto network = Network{
+        make_shared<FullyConnectedLayer>(30, 30),
+        make_shared<FullyConnectedLayer>(30, 30),
+        make_shared<FullyConnectedLayer>(30, 10),
     };
 }
 

@@ -11,7 +11,7 @@ namespace simplenet {
 
 class Network {
   public:
-    Network(std::initializer_list<std::unique_ptr<Layer>> initial) {
+    Network(std::initializer_list<std::shared_ptr<Layer>> initial) {
         layers.reserve(initial.size());
         for (auto l : initial) {
             layers.emplace_back(l);
@@ -26,7 +26,7 @@ class Network {
         return output;
     }
 
-    std::vector<std::unique_ptr<Layer>> layers;
+    std::vector<std::shared_ptr<Layer>> layers;
 };
 
 } // namespace simplenet
