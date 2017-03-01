@@ -11,22 +11,14 @@ namespace simplenet {
 
 class Network {
   public:
-    Network(std::initializer_list<std::shared_ptr<Layer>> initial) {
-        layers.reserve(initial.size());
-        for (auto l : initial) {
-            layers.emplace_back(l);
-        }
-    }
+    Network(std::initializer_list<std::shared_ptr<Layer>>);
 
-    vec evaluate(const vec& input) {
-        auto output = input;
-        for (const auto& layer : layers) {
-            output = layer->feed_forwards(output);
-        }
-        return output;
-    }
+    vec evaluate(const vec&);
 
     std::vector<std::shared_ptr<Layer>> layers;
 };
+
+/// Unit tests
+void test_network();
 
 } // namespace simplenet

@@ -12,7 +12,7 @@ using namespace mnist;
 
 namespace {
 
-using byte = unsigned char;
+using byte = uint8_t;
 
 int32_t read_int32(const char* buff) {
     return byte(buff[3]) << 0 | byte(buff[2]) << 8 | byte(buff[1]) << 16 | byte(buff[0]) << 24;
@@ -31,6 +31,7 @@ Image read_image(size_t n_rows, size_t n_cols, istream& stream) {
 
     return result;
 }
+
 } // Anonymous namespace
 
 vector<Image> mnist::load_images(istream& stream) {
