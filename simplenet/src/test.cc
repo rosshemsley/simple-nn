@@ -18,4 +18,5 @@ void run_test(string name, T test) {
 
 int main() {
     run_test("network", test_network);
+    run_test("layer", test_layer);
 }

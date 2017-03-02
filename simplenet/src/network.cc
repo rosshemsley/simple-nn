@@ -12,11 +12,15 @@ simplenet::Network::Network(std::initializer_list<std::shared_ptr<Layer>> initia
 vec simplenet::Network::evaluate(const vec& input) {
     auto output = input;
     for (const auto& layer : layers) {
-        output = layer->feed_forwards(output);
+        output = layer->feed_forward(output);
     }
     return output;
 }
 
+/**
+ * Unit tests
+ */
+
 void simplenet::test_network() {
-    
+
 }

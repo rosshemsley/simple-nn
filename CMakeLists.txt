@@ -14,9 +14,10 @@ set(MNIST_SOURCES
 )
 
 set(SIMPLE_NN_SOURCES
+    simplenet/src/layer
+    simplenet/src/network
     simplenet/src/simplenet
     simplenet/src/test
-    simplenet/src/network
 )
 
 add_library(mnist STATIC ${MNIST_SOURCES})
