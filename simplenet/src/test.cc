@@ -1,6 +1,6 @@
-#include <simplenet.h>
+#include <simplenet/simplenet.h>
 
-#include <network.h>
+#include <simplenet/network.h>
 
 #include <string>
 

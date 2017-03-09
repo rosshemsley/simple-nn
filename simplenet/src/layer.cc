@@ -1,4 +1,4 @@
-#include <layer.h>
+#include <simplenet/layer.h>
 
 #include <cassert>
 

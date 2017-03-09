@@ -1,11 +1,10 @@
 #pragma once
 
+#include <simplenet/activation_functions.h>
+#include <simplenet/network_types.h>
+
 #include <armadillo>
 #include <cassert>
-
-#include <activation_functions.h>
-#include <network_types.h>
-
 #include <iostream>
 
 using namespace std;

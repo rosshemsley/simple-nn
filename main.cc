@@ -1,7 +1,6 @@
-#include <mnist.h>
-
-#include <layer.h>
-#include <network.h>
+#include <mnist/mnist.h>
+#include <simplenet/layer.h>
+#include <simplenet/network.h>
 
 #include <fstream>
 #include <iostream>

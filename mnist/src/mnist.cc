@@ -1,4 +1,4 @@
-#include <mnist.h>
+#include <mnist/mnist.h>
 
 #include <algorithm>
 #include <cstdint>

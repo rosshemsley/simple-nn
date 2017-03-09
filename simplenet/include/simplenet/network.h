@@ -1,8 +1,8 @@
 #pragma once
 
-#include <activation_functions.h>
-#include <layer.h>
-#include <network_types.h>
+#include <simplenet/activation_functions.h>
+#include <simplenet/layer.h>
+#include <simplenet/network_types.h>
 
 #include <memory>
 #include <vector>
@@ -28,11 +28,11 @@ class Network {
      *             input gates of the first layer, and the associated labels, with `n_rows` matching
      *             the number of output gates.
      */
-    train(const std::vector<vec>& data,
-          const std::vector<vec>& labels,
-          int n_epochs,
-          int batch_size,
-          double learning_rate);
+    void train(const std::vector<vec>& data,
+               const std::vector<vec>& labels,
+               int n_epochs,
+               int batch_size,
+               double learning_rate);
 
     std::vector<std::shared_ptr<Layer>> layers;
 };
