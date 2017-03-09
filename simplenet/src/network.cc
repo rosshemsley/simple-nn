@@ -17,10 +17,19 @@ vec simplenet::Network::evaluate(const vec& input) {
     return output;
 }
 
+void simplenet::Network::train(const vector<vec>& data,
+                               const vector<vec>& labels,
+                               int n_epochs,
+                               int batch_size,
+                               double learning_rate) {
+
+    
+
+}
+
 /**
  * Unit tests
  */
 
 void simplenet::test_network() {
-
 }
